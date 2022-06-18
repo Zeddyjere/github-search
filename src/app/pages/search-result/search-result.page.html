@@ -1,0 +1,27 @@
+<div class="top-bar" fxLayout="row" fxLayoutAlign="start center">
+  <app-logo class="logo"></app-logo>
+  <app-search-bar class="search-bar" (emitSearchTerm)="performNewSearch($event)"></app-search-bar>
+</div>
+
+<div *ngIf="!error; else showError" class="content">
+  <div *ngIf="loading; else body">
+    <app-loading-search *ngFor="let user of [1,2,3,4,5]"></app-loading-search>
+  </div>
+
+  <ng-template #body>
+    <div class="title">{{ searchResults.totalCount }} users found</div>
+    <div *ngFor="let user of searchResults.users">
+      <app-user [user]="user"></app-user>  
+    </div>
+    <div *ngIf="searchResults.totalCount" class="footer">
+      <app-pagination [totalCount]="searchResults.totalCount"
+                      [currentPageNo]="pageNo"
+                      (emitSearchPage)="searchPage($event)">
+      </app-pagination>
+    </div>
+  </ng-template>
+</div>
+
+<ng-template #showError>
+  <div class="alert alert-error">{{ error }}</div>
+</ng-template>

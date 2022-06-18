@@ -1,0 +1,39 @@
+.avatar {
+  border-radius: 5px; 
+  height: 40px;
+  width: 40px;
+  background-color: #efefef;
+}
+
+.user-card {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: -1px;
+}
+
+.pill {
+  height: 10px; 
+  width: 300px;
+  background-color: #efefef;
+  margin-bottom: 5px;
+  border-radius: 20px;
+}
+
+.pill, .avatar {
+  animation: hintloading 1s ease-in-out 0s infinite reverse;
+  -webkit-animation: hintloading 1s ease-in-out 0s infinite reverse;
+}
+
+@keyframes hintloading
+{
+  0% { opacity: 0.5; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.5; }
+}
+
+@-webkit-keyframes hintloading
+{
+  0% { opacity: 0.5; }
+  50%  { opacity: 1; }
+  100% { opacity: 0.5; }
+}

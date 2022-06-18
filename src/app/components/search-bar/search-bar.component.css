@@ -1,0 +1,19 @@
+.mat-form-field {
+  margin-right: 10px; 
+  width: 100%;
+}
+
+.mat-form-field span {
+  margin-right: 30px; 
+}
+
+button {
+  background-color: #FF6B6B;
+  color: #fff;
+  padding: 10px 25px;
+  margin-top: 5px;
+}
+
+button:disabled {
+  background-color: #efefef;
+}

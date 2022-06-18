@@ -1,0 +1,23 @@
+<div fxLayout="row">
+  <div fxFlex="20">
+    <div class="previous" fxLayoutAlign="start center" (click)="searchPageResults(currentPageNo - 1)">
+      <mat-icon>chevron_left</mat-icon>
+      <span>Previous</span>
+    </div>
+  </div>
+
+  <div fxFlex="60" fxLayout="row" fxLayoutAlign="center center">
+    <div *ngFor="let pageCount of getPageNumbers(currentPageNo, totalCount)" class="page"
+         [ngClass]="{ 'active' : pageCount === currentPageNo }"
+         (click)="searchPageResults(pageCount)">
+      {{ pageCount === -1 ? '...' : pageCount }}
+    </div>
+  </div>
+
+  <div fxFlex="20" fxLayoutAlign="end center" (click)="searchPageResults(currentPageNo + 1)">
+    <div class="next" fxLayoutAlign="start center">
+      <span>Next</span>
+      <mat-icon>chevron_right</mat-icon>
+    </div>
+  </div>
+</div>

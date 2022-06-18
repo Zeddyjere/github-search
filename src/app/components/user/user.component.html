@@ -1,0 +1,29 @@
+<div class="user-card" fxLayout="row" fxLayoutAlign="start center" (click)="navigateToGithubProfile(user.profileUrl)">
+  <div fxFlex="10">
+    <img [src]="user.avatarUrl" alt="user-avatar" />
+  </div>
+
+  <div fxFlex>
+    <div fxLayout="row">
+      <div class="full-name">{{ user.fullName }}</div>
+      <div class="user-name">{{ user.username }}</div>
+    </div>
+
+    <div *ngIf="user.bio" class="desc">{{ user.bio }}</div>
+    
+    <div fxLayout="row">
+      <div class="count" fxLayoutAlign="start center">
+        <mat-icon>code</mat-icon>
+        <span>{{ user.repositories }} repositories</span>
+      </div>
+      <div *ngIf="user.followers" class="count" fxLayoutAlign="start center">
+        <mat-icon>people</mat-icon>
+        <span>{{ user.followers }} followers</span>
+      </div>
+      <div *ngIf="user.location" class="count" fxLayoutAlign="start center">
+        <mat-icon>place</mat-icon>
+        <span>{{ user.location }}</span>
+      </div>
+    </div>
+  </div>
+</div>

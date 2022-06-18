@@ -1,0 +1,40 @@
+img {
+  max-width: 55px;
+}
+
+.user-card {
+  cursor: pointer;
+  transition-duration: .2s;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-top: -1px;
+}
+
+.user-card:hover {
+  background-color: #fafafa;
+}
+
+.full-name {
+  color: #1F4690; 
+  margin-right: 7px;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.user-name, .desc {
+  font-size: 14px;
+}
+
+.desc {
+  margin-bottom: 10px;
+}
+
+.count {
+  margin-right: 10px;
+  font-size: 13px;
+  color: #888;
+}
+
+.count .mat-icon {
+  margin-right: 5px;
+}

@@ -1,0 +1,27 @@
+.previous, .next {
+  cursor: pointer;
+  color: #1F4690;
+  padding: 5px;
+  width: fit-content;
+}
+
+.page, .ellipses {
+  padding: 5px 10px;
+  margin: 0 2px;
+  border-radius: 5px;
+  transition-duration: .2s;
+}
+
+.page {
+  cursor: pointer;
+}
+
+.active {
+  background-color: #C4DDFF;
+  color: #1F4690;
+}
+
+.page:hover {
+  background-color: #C4DDFF;
+  color: #1F4690;
+}

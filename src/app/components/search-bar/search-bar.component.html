@@ -1,0 +1,11 @@
+<div fxLayout="row">
+  <mat-form-field appearance="outline">
+    <span matPrefix><mat-icon>search</mat-icon></span>
+    <mat-label>Search Github User</mat-label>
+    <input matInput placeholder="John Doe" (keydown.enter)="search()" [(ngModel)]="searchTerm" />
+  </mat-form-field>
+  
+  <div>
+    <button mat-button (click)="search()" [disabled]="!searchTerm">Search</button>
+  </div>
+</div>

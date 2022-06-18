@@ -1,0 +1,17 @@
+.logo {
+  cursor: pointer;
+  width: fit-content;
+}
+
+.logo img {
+  max-width: 40px;
+  margin-right: 5px; 
+}
+
+.logo div strong {
+  margin-right: 2px;
+}
+
+.logo div span {
+  font-weight: 300;
+}

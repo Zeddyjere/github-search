@@ -1,0 +1,10 @@
+<div class="wrapper">
+  <app-logo></app-logo>
+
+  <div class="content" fxLayout="column" fxLayoutAlign="center center">
+    <div class="heading">Welcome to <span>Github</span> User Search<span>.</span></div>
+    <div class="subheading">Search more than 92 million users</div>
+
+    <app-search-bar class="search-bar" (emitSearchTerm)="search($event)"></app-search-bar>
+  </div>
+</div>
